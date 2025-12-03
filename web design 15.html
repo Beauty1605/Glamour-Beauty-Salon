@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beauty Salon</title>
+
+    <style>
+        body { font-family: Poppins, sans-serif; margin: 0; background: #fff1f7; }
+        header { background: #ff4d88; padding: 20px; text-align: center; color: white; font-size: 30px; }
+
+        .container { width: 85%; margin: auto; padding: 20px; }
+
+        h2 { color: #ff4d88; }
+
+        .services, .booking, .gallery {
+            background: white; padding: 20px;
+            margin: 20px 0; border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-item {
+            padding: 12px; background: #ffe6ef;
+            border-radius: 8px; margin: 10px 0;
+        }
+
+        form input, form select {
+            width: 100%; padding: 10px; margin: 8px 0;
+            border-radius: 6px; border: 1px solid #aaa;
+        }
+
+        button {
+            background: #ff4d88; color: white;
+            padding: 10px 15px; border: none;
+            border-radius: 6px; cursor: pointer;
+        }
+
+        .gallery img {
+            width: 30%; border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>💄 Glamour Beauty Salon</header>
+
+<div class="container">
+
+    <!-- Services Section -->
+    <div class="services">
+        <h2>✨ Our Services</h2>
+
+        <div class="service-item">Hair Cut – ₹299</div>
+        <div class="service-item">Facial Treatment – ₹899</div>
+        <div class="service-item">Manicure & Pedicure – ₹499</div>
+        <div class="service-item">Bridal Makeup – ₹4999</div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking">
+        <h2>📅 Book an Appointment</h2>
+
+        <form onsubmit="book(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+
+            <select id="service">
+                <option>Select Service</option>
+                <option>Hair Cut</option>
+                <option>Facial</option>
+                <option>Manicure</option>
+                <option>Bridal Makeup</option>
+            </select>
+
+            <input type="date" id="date" required>
+            <button>Book Now</button>
+        </form>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <h2>📸 Before & After Gallery</h2>
+
+        <img src="https://cdn1.treatwell.net/images/view/v2.i9161701.w1080.h720.x51172D38/" alt="">
+        <img src="https://static.vecteezy.com/system/resources/previews/040/747/418/large_2x/professional-makeup-artist-and-hairstylist-preparing-female-customer-in-beauty-salon-photo.jpg" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZQuE1CSoBGbiCCGRVviQvpoOxyqctyb8vkw&s" alt="">
+    </div>
+
+</div>
+
+<script>
+    function book(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let service = document.getElementById("service").value;
+        alert("Thank you " + name + "! Your booking for " + service + " is confirmed.");
+    }
+</script>
+
+</body>
+</html>
